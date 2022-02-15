@@ -21,8 +21,9 @@ add_custom_command(
     DEPENDS "${schema_deps}"
 )
 
+option(SPH_ONLY_STATIC_BUILD "SPH_ONLY_STATIC_BUILD" 0)
 if(NOT SPH_ONLY_STATIC_BUILD)
-    add_library(GLTFSDK ${source_files} ${CMAKE_BINARY_DIR}/GeneratedFiles/SchemaJson.h)
+    add_library(GLTFSDK SHARED ${source_files} ${CMAKE_BINARY_DIR}/GeneratedFiles/SchemaJson.h)
 else()
     add_library(GLTFSDK STATIC ${source_files} ${CMAKE_BINARY_DIR}/GeneratedFiles/SchemaJson.h)
 endif()
