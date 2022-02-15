@@ -39,8 +39,8 @@ endif()
 if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     target_compile_options(GLTFSDK
         PRIVATE "-Wunguarded-availability"
-        PRIVATE "-Wall"
-        PRIVATE "-Werror"
+        #PRIVATE "-Wall"
+        #PRIVATE "-Werror"
         PUBLIC "-Wno-unknown-pragmas")
 endif()
 
