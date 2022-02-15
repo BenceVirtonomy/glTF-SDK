@@ -21,7 +21,11 @@ add_custom_command(
     DEPENDS "${schema_deps}"
 )
 
-add_library(GLTFSDK ${source_files} ${CMAKE_BINARY_DIR}/GeneratedFiles/SchemaJson.h)
+if(NOT SPH_ONLY_STATIC_BUILD)
+    add_library(GLTFSDK ${source_files} ${CMAKE_BINARY_DIR}/GeneratedFiles/SchemaJson.h)
+else()
+    add_library(GLTFSDK STATIC ${source_files} ${CMAKE_BINARY_DIR}/GeneratedFiles/SchemaJson.h)
+endif()
 
 if (MSVC)
     # Generate PDB files in all configurations, not just Debug (/Zi)
