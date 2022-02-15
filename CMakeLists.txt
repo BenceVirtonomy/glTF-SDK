@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 project (GLTFSDK)
 
-option(ENABLE_UNIT_TESTS "ENABLE_UNIT_TESTS" ON)
+option(ENABLE_UNIT_TESTS "ENABLE_UNIT_TESTS" OFF)
 if(ENABLE_UNIT_TESTS)
     enable_testing()
 endif()
@@ -11,7 +11,7 @@ endif()
 if(APPLE OR ANDROID_OS_PLATFORM)
     option(ENABLE_SAMPLES "ENABLE_SAMPLES" OFF)
 else()
-    option(ENABLE_SAMPLES "ENABLE_SAMPLES" ON)
+    option(ENABLE_SAMPLES "ENABLE_SAMPLES" OFF)
 endif()
 
 set(CMAKE_CXX_STANDARD 14)
