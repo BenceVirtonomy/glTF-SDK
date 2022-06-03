@@ -3,6 +3,7 @@
 
 #pragma once
 
+#include <limits>
 #include <GLTFSDK/Color.h>
 #include <GLTFSDK/ExtensionsKHR.h>
 

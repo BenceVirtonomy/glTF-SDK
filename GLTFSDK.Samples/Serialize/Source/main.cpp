@@ -18,6 +18,7 @@
 
 #include <cassert>
 #include <cstdlib>
+#include <limits>
 
 using namespace Microsoft::glTF;
 

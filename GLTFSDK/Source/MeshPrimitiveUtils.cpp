@@ -7,6 +7,7 @@
 #include <GLTFSDK/GLTFResourceReader.h>
 #include <GLTFSDK/BufferBuilder.h>
 
+#include <limits>
 #include <cassert>
 #include <numeric>
 
